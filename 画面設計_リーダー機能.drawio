@@ -1,0 +1,196 @@
+<mxfile host="65bd71144e">
+    <diagram id="nHD_Gq8wWqjprAnxEH-Q" name="ページ1">
+        <mxGraphModel dx="787" dy="1636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="-220" width="400" height="770" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font color=&quot;#000000&quot;&gt;　動的小説&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="-220" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;font&gt;ユーザ名&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="-220" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font color=&quot;#000000&quot;&gt;クリエイター系機能&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="240" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;font color=&quot;#000000&quot;&gt;パーツ登録&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="330" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;font color=&quot;#000000&quot;&gt;グループ編集&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="370" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font color=&quot;#000000&quot;&gt;パレット追加&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="410" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;font color=&quot;#000000&quot;&gt;作品作成へ&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="290" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="850" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;font color=&quot;#000000&quot;&gt;　動的小説&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="850" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font color=&quot;#000000&quot;&gt;検索バー&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="182" y="900" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="作品サムネ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="168" y="950" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="950" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="表示設定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="920" width="86" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;表示列の切り替え：&lt;/span&gt;&lt;br style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;リスト、タイル&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#ffffff&quot;&gt;表示する内容も変更される&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;常備&lt;br&gt;- サムネ&lt;br&gt;- タイトル&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;作者名&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入り数&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入りボタン&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;リストだと以下の情報も出る&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;- 初回公開日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;更新日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;ページ数&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;タグ&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;- 前書き&lt;br&gt;&lt;/span&gt;&lt;br style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;サムネ、タイトル前書きクリックで作品に移動&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;タグクリックで検索&lt;/span&gt;&lt;br style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;ソート：&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- タイトル&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;作者名&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入り数&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;- 初回公開日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;更新日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- ページ数&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;＋付箋、お気に入り、感想の更新日時でソート&lt;br&gt;条件で表示を絞れる&lt;br&gt;・直近で閲覧したことのある作品（セッション）&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;・&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;付箋を貼った作品　　※ユーザ限定&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;・&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;お気に入りした作品&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;　※ユーザ限定&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;・&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;感想を書いた作品　&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;　※ユーザ限定&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="880" width="310" height="590" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1169" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="作品サムネ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="138" y="1269" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="322" y="1269" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="表示設定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="1239" width="86" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="1040" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="168" y="1040" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1269" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="1269" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="&lt;font color=&quot;#000000&quot;&gt;タイトル&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="138" y="1359" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1359" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="322" y="1359" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="1359" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="138" y="1389" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="322" y="1389" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1389" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="1389" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;font&gt;ユーザ画面&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-270" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="&lt;font&gt;ユーザ名&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="850" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="アイコン" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="-175" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;font color=&quot;#000000&quot;&gt;ユーザ名&lt;br&gt;メールアドレス&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" parent="1" vertex="1">
+                    <mxGeometry x="218" y="-175" width="220" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;font color=&quot;#000000&quot;&gt;連携しているSNSの一覧&lt;br&gt;- Twitter　　　連携していません&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;- FaceBook　 連携していません&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;- Instagram　連携していません&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;- LINE　　　連携していません&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="-80" width="318" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="&lt;font color=&quot;#000000&quot;&gt;連携するボタン&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="318" y="-50" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="&lt;font color=&quot;#000000&quot;&gt;連携するボタン&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="318" y="-30" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="&lt;font color=&quot;#000000&quot;&gt;連携するボタン&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="318" y="-10" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="&lt;font color=&quot;#000000&quot;&gt;連携するボタン&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="318" y="10" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="&lt;font color=&quot;#000000&quot;&gt;読者機能&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;お気に入り一覧&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="120" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="&lt;font color=&quot;#000000&quot;&gt;付箋一覧&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="160" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="&lt;font color=&quot;#000000&quot;&gt;感想一覧&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="200" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="&lt;font color=&quot;#000000&quot;&gt;　閲覧履歴　　　　　　　　　　　　　　　　〇〇件&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="144" y="80" width="306" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="TOP画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="800" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="&lt;font color=&quot;#000000&quot;&gt;ユーザ設定更新&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" parent="1" vertex="1">
+                    <mxGeometry x="319" y="-130" width="122" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;ユーザ設定更新モーダル&lt;/span&gt;&lt;/div&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;- アイコンアップロード&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;- ユーザ名&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;- メールアドレス&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;まとめて一括更新&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="-200" width="230" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;クリックすると各一覧画面に移動&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;リンク全てに件数が事前に出ている&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="30" width="230" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="&lt;font color=&quot;#000000&quot;&gt;検索バー&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="1209" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;font color=&quot;#000000&quot;&gt;　動的小説&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="1169" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="&lt;font&gt;ユーザ名&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="1169" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="1600" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="&lt;font color=&quot;#000000&quot;&gt;　動的小説&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="1600" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="作品サムネ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="168" y="1700" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="&lt;font color=&quot;#000000&quot;&gt;内容&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1700" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1790" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="168" y="1790" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="&lt;font&gt;ユーザ名&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="1600" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="各種一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="1530" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="〇〇一覧画面" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="168" y="1640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="&lt;font color=&quot;#ffffff&quot;&gt;閲覧、お気に入り、付箋、感想ページ&lt;br&gt;&lt;br&gt;リスト表示のみ&lt;br&gt;閲覧、お気に入り&lt;br&gt;作品情報&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- サムネ&lt;br&gt;- タイトル&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;作者名&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入り数&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入りボタン&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;- 初回公開日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;更新日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;ページ数&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;タグ&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;&lt;br&gt;- 前書き&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;&lt;br&gt;付箋、感想&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- サムネ&lt;br&gt;- タイトル&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;作者名&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;- 投稿日時&lt;br&gt;- 記載内容&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#ffffff&quot;&gt;ソート：&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- タイトル&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;作者名&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;お気に入り数&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;- 初回公開日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255) ; text-align: center&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;更新日&lt;/span&gt;&lt;br style=&quot;text-align: center&quot;&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255 , 255 , 255)&quot;&gt;- ページ数&lt;/span&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="1609" width="310" height="561" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
