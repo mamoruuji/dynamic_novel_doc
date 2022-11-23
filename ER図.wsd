@@ -1,0 +1,197 @@
+@startuml 動的小説
+hide circle
+skinparam linetype ortho
+
+entity "user（ユーザ）" as users{
+    int : int autoincrement : ユーザID
+  * email_address : varchar(255) : メールアドレス
+  * password : varchar(255) : パスワード
+    created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  indexなんちゃらかんちゃら
+}
+
+entity "novel（作品）" as novels {
+  - id: int NOT NULL
+  * user_id : int not null : ユーザID
+  * detail : text : 詳細
+    created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "chapter（章）" as chapters {
+  - id : int NOT NULL
+  * novel_id : varchar(10) : 作品ID
+  * order : int : 順番
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "page（ページ）" as pages {
+  - id : int NOT NULL
+  * novel_id : varchar(10) : 作品ID
+  * chapter_id : varchar(5) : 章ID
+  * order : int : 順番
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "section（セクション）" as sections {
+  - id : int NOT NULL
+  * section_type : int(2) : 01:テキスト 02:画像 03:動画 04:背景
+  * novel_id : varchar(10) : 作品ID
+  * page_id : varchar(5) : ページID
+    text : text : テキスト
+  * standing_picture_group_id : varchar(9): 立ち絵ID
+  * font_id : varchar(4) : フォントID
+  * text_color : varchar(7) : 文字色
+  * text_size : int : 初期文字サイズ
+  * frame_id : varchar(4) : 初期フレームID
+  * frame_color : varchar(7) : 初期フレーム色
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+
+entity "standing_picture_group（立ち絵グループ）" as standing_picture_groups {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "standing_picture（立ち絵）" as standing_pictures {
+  - id : bigint autoincrement
+  * picture_group_id : int not null : 立ち絵グループID
+  * standing_picture_data : text : 立ち絵画像
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "font（フォント）" as fonts {
+  - id : int NOT NULL
+  * font_data : varchar(100) : フォントデータ
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "frame（吹き出し）" as frames {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * frame_image : : 吹き出しイメージ
+  * created_at : datetime : 新規作成日時
+  * updated_at : datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "image（イメージ）" as images {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * image_data: varchar(255) : int not null
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "video（ビデオ）" as videos {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * video_tag : varchar(255) : int not null
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "palette（パレット）" as palettes {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * novel_id: varchar(10): 作品ID
+  * picture_group_id : int not null :立ち絵グループ
+  * defalut_font_id: varchar(4): 初期フォントID
+  * defalut_text_color: varchar(7): 初期文字色
+  * defalut_text_size: int: 初期文字サイズ
+  * defalut_frame_id: varchar(7): 初期フレームID
+  * defalut_frame_color: varchar(7): 初期フレーム色
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "bookmark_novel（お気に入り作品）" as bookmark_novels {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * novel_id : int not null : 作品ID
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "impression（感想）" as impressions {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * novel_id : int not null : 作品ID
+  * impression : text : 感想
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+entity "impression（感想）" as impressions {
+  - id : bigint autoincrement
+  * user_id : int not null : ユーザID
+  * novel_id : int not null : 作品ID
+  * impression : text : 感想
+  * created_at: datetime : 新規作成日時
+  * updated_at: datetime : 更新日時
+  --
+  * id : number <<FK>>
+}
+
+users |o--o{ novels
+novels |o--|{ chapters
+chapters ||--|{ pages
+pages ||--|{ sections
+
+sections |o--|| fonts
+sections |o--o{ standing_pictures
+sections |o--|| frames
+sections |o--|| images
+sections |o--|| videos
+
+users |o--o{ standing_picture_groups
+users |o--o{ fonts
+users |o--o{ images
+users |o--o{ videos
+users |o--o{ palettes
+
+standing_picture_groups ||--|{ standing_pictures
+
+palettes |o--|| fonts
+palettes |o--|| frames
+palettes |o--|| standing_pictures
+
+@enduml
+
+
+
