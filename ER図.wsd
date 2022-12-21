@@ -3,195 +3,211 @@ hide circle
 skinparam linetype ortho
 
 entity "user（ユーザ）" as users{
-    int : int autoincrement : ユーザID
-  * email_address : varchar(255) : メールアドレス
-  * password : varchar(255) : パスワード
-    created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  indexなんちゃらかんちゃら
+  * <<PK>> id : smallserial : ID
+  -
+  * <<u>> email_address : varchar(319) : メールアドレス
+  password_hash : varchar(256) NOT NULL : パスワード
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
 entity "novel（作品）" as novels {
-  - id: int NOT NULL
-  * user_id : int not null : ユーザID
-  * detail : text : 詳細
-    created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> user_id : int NOT NULL : ユーザID
+  detail : text : 詳細
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
 entity "chapter（章）" as chapters {
-  - id : int NOT NULL
-  * novel_id : varchar(10) : 作品ID
-  * order : int : 順番
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> novel_id : int NOT NULL : 作品ID
+  chapter_order : smallint NOT NULL : 作品内の章順
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
 entity "page（ページ）" as pages {
-  - id : int NOT NULL
-  * novel_id : varchar(10) : 作品ID
-  * chapter_id : varchar(5) : 章ID
-  * order : int : 順番
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> novel_id : int NOT NULL : 作品ID
+  * <<FK>> chapter_id : int NOT NULL : 章ID
+  pege_order : smallint NOT NULL : 章内のページ順
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
-entity "section（セクション）" as sections {
-  - id : int NOT NULL
-  * section_type : int(2) : 01:テキスト 02:画像 03:動画 04:背景
-  * novel_id : varchar(10) : 作品ID
-  * page_id : varchar(5) : ページID
-    text : text : テキスト
-  * standing_picture_group_id : varchar(9): 立ち絵ID
-  * font_id : varchar(4) : フォントID
+entity "section_numbering（セクション採番）" as section_numberings {
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> novel_id : int NOT NULL : 作品ID
+  * <<FK>> page_id : int NOT NULL : ページID
+  section_order : smallint NOT NULL : ページ内のセクション順
+  page_position : enum NOT NULL : ページ内の位置（1:left, 2:senter, 3:right）
+}
+
+entity "section_text（セクション文字）" as section_texts {
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> section_id : int NOT NULL : セクションID
+  text : text : テキスト
   * text_color : varchar(7) : 文字色
-  * text_size : int : 初期文字サイズ
-  * frame_id : varchar(4) : 初期フレームID
-  * frame_color : varchar(7) : 初期フレーム色
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * text_size : int : 文字サイズ
+  <<FK>> standing_picture_id : smallint : 立ち絵ID
+  * <<FK>> font_id : smallint NOT NULL : フォントID
+  * <<FK>> frame_id : smallint NOT NULL : フレームID
+  frame_color : varchar(7) : フレーム色
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
-
-entity "standing_picture_group（立ち絵グループ）" as standing_picture_groups {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+entity "section_image（セクション画像）" as section_images {
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> section_id : int NOT NULL : セクションID
+  * <<FK>> image_id : int NOT NULL : 画像ID
+  frame_color : varchar(7) : フレーム色
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
-entity "standing_picture（立ち絵）" as standing_pictures {
-  - id : bigint autoincrement
-  * picture_group_id : int not null : 立ち絵グループID
-  * standing_picture_data : text : 立ち絵画像
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
+entity "section_video（セクション動画）" as section_videos {
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> section_id : int NOT NULL : セクションID
+  * <<FK>> video_id : int NOT NULL : 動画ID
+  frame_color : varchar(7) : フレーム色
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
 }
 
-entity "font（フォント）" as fonts {
-  - id : int NOT NULL
-  * font_data : varchar(100) : フォントデータ
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
-}
-
-entity "frame（吹き出し）" as frames {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * frame_image : : 吹き出しイメージ
-  * created_at : datetime : 新規作成日時
-  * updated_at : datetime : 更新日時
-  --
-  * id : number <<FK>>
-}
-
-entity "image（イメージ）" as images {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * image_data: varchar(255) : int not null
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
-}
-
-entity "video（ビデオ）" as videos {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * video_tag : varchar(255) : int not null
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
-}
-
-entity "palette（パレット）" as palettes {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * novel_id: varchar(10): 作品ID
-  * picture_group_id : int not null :立ち絵グループ
-  * defalut_font_id: varchar(4): 初期フォントID
-  * defalut_text_color: varchar(7): 初期文字色
-  * defalut_text_size: int: 初期文字サイズ
-  * defalut_frame_id: varchar(7): 初期フレームID
-  * defalut_frame_color: varchar(7): 初期フレーム色
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
+entity "defalut_palette（デフォルトパレット）" as defalut_palettes {
+  * <<PK>> id : smallserial : ID
+  -
+  * <<FK>> user_id : int NOT NULL : ユーザID
+  * <<FK>> novel_id: varchar(10): 作品ID
+  <<FK>> picture_group_id : smallint : 立ち絵グループID
+  * <<FK>> font_id: smallint NOT NULL: フォントID
+  text_color: varchar(7): 文字色
+  text_size: int: 文字サイズ
+  * <<FK>> frame_id: smallint NOT NULL : フレームID
+  frame_color: smallint NOT NULL : フレーム色
+  created_at: timestamptz NOT NULL : 新規作成日時
+  updated_at: timestamptz NOT NULL : 更新日時
 }
 
 entity "bookmark_novel（お気に入り作品）" as bookmark_novels {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * novel_id : int not null : 作品ID
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> user_id : int NOT NULL : ユーザID
+  * <<FK>> novel_id : int NOT NULL : 作品ID
+  created_at: timestamptz NOT NULL : 新規作成日時
+  updated_at: timestamptz NOT NULL : 更新日時
 }
 
 entity "impression（感想）" as impressions {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * novel_id : int not null : 作品ID
-  * impression : text : 感想
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
+  * <<PK>> id : serial : ID
+  -
+  * <<FK>> user_id : int NOT NULL : ユーザID
+  * <<FK>> novel_id : int NOT NULL : 作品ID
+  text : text NOT NULL : 感想
+  created_at: timestamptz NOT NULL : 新規作成日時
+  updated_at: timestamptz NOT NULL : 更新日時
 }
 
-entity "impression（感想）" as impressions {
-  - id : bigint autoincrement
-  * user_id : int not null : ユーザID
-  * novel_id : int not null : 作品ID
-  * impression : text : 感想
-  * created_at: datetime : 新規作成日時
-  * updated_at: datetime : 更新日時
-  --
-  * id : number <<FK>>
+entity "standing_picture_group（立ち絵グループ）" as standing_picture_groups {
+  * <<PK>> id : serial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
+}
+
+entity "standing_picture（立ち絵）" as standing_pictures {
+  * <<PK>> id : serial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  <<FK>> picture_group_id : int : 立ち絵グループID
+  <<u>> standing_picture_data_url : text : 立ち絵画像URL
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
+}
+
+entity "font（フォント）" as fonts {
+  * <<PK>> id : serial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  <<u>> font_data_url : varchar(100) : フォントデータURL
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
+}
+
+entity "frame（吹き出し）" as frames {
+  * <<PK>> id : smallserial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  <<u>> css : text : CSS
+  created_at : timestamptz NOT NULL : 新規作成日時
+  updated_at : timestamptz NOT NULL : 更新日時
+}
+
+entity "image（画像）" as images {
+  * <<PK>> id : smallserial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  <<u>> image_data_URL: varchar(255) NOT NULL : 画像URL
+  created_at: timestamptz NOT NULL : 新規作成日時
+  updated_at: timestamptz NOT NULL : 更新日時
+}
+
+entity "video（動画）" as videos {
+  * <<PK>> id : smallserial : ID
+  -
+  <<FK>> user_id : int NOT NULL : ユーザID ※ NULL:全ユーザ共有
+  <<u>> video_data_URL : varchar(255) NOT NULL : 動画URL
+  created_at: timestamptz NOT NULL : 新規作成日時
+  updated_at: timestamptz NOT NULL : 更新日時
 }
 
 users |o--o{ novels
 novels |o--|{ chapters
 chapters ||--|{ pages
-pages ||--|{ sections
-
-sections |o--|| fonts
-sections |o--o{ standing_pictures
-sections |o--|| frames
-sections |o--|| images
-sections |o--|| videos
+pages ||--|{ section_numberings
 
 users |o--o{ standing_picture_groups
+users |o--o{ standing_pictures
 users |o--o{ fonts
+users |o--o{ frames
 users |o--o{ images
 users |o--o{ videos
-users |o--o{ palettes
+users |o--o{ defalut_palettes
+users |o--o{ bookmark_novels
+users |o--o{ impressions
+
+section_numberings ||--|| section_texts
+section_numberings ||--|| section_images
+section_numberings ||--|| section_videos
+
+section_texts |o--o{ standing_pictures
+section_texts |o--|| fonts
+section_texts |o--|| frames
+section_images |o--|| images
+section_videos |o--|| videos
 
 standing_picture_groups ||--|{ standing_pictures
 
-palettes |o--|| fonts
-palettes |o--|| frames
-palettes |o--|| standing_pictures
+defalut_palettes |o--|| standing_picture_groups
+defalut_palettes |o--|| fonts
+defalut_palettes |o--|| frames
 
+' ローカルルール
+'     頭には主キーを記載し -- で区切る
+'     * 必須キー
+'     <<PK>> 主キー
+'     <<FK>> 外部キー
+'     <<u>> ユニークキー
+'     カラム名 : 型 : 説明 を書く
+'     複合ユニークなど特別な記載は -- で更に区切って記述
 @enduml
-
-
-
