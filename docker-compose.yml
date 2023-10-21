@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  api:
+    image: dynamic_novel/api:1.0
+    build: ./server
+    container_name: 'dynamic_novel_server'
+    ports:
+      - "8080:8080"
+    networks:
+      - network
+    extra_hosts:
+      - "api-host:127.0.0.1"
+    stdin_open: true
+    tty: true
+    working_dir: '/go/src/github.com/mamoruuji/dynamic_novel_api'
+    volumes:
+      - ./server/api:/go/src/github.com/mamoruuji/dynamic_novel_api
+    depends_on:
+      - web
+  db:
+    image: dynamic_novel/db:1.0
+    build: ./db
+    container_name: dynamic_novel_postgresql
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
+    ports:
+      - "5432:5432"
+    networks:
+      - network
+    env_file:
+      - ./db/connection.env
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./db/postgresql.conf:/etc/postgresql/postgresql.conf
+    restart: always
+  web:
+    image: dynamic_novel/web:1.0
+    build: ./client
+    container_name: 'dynamic_novel_client'
+    ports:
+      - "3000:3000"
+    networks:
+      - network
+    stdin_open: true
+    tty: true
+    working_dir: /dynamic_novel_web
+    environment:
+      - WATCHPACK_POLLING=true
+    volumes:
+      - ./client/web:/dynamic_novel_web
+      - node_modules-volume:/dynamic_novel_web/node_modules
+    depends_on:
+      - db
+
+networks:
+  network:
+    driver: bridge
+    # internal: true
+
+volumes:
+  node_modules-volume:
