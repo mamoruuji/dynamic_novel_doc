@@ -1,2 +1,6 @@
-FROM node:20-bookworm
+FROM node:22-alpine
+
 WORKDIR /web
+
+RUN apk add --no-cache \
+  git

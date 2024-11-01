@@ -1,37 +1,44 @@
-FROM golang:1.21-bookworm
+FROM golang:1.22-alpine AS builder
 
 WORKDIR /go/src/github.com/mamoruuji/dynamic_novel_api
 
 COPY api/go.mod ./
 COPY api/go.sum ./
 
-RUN apt-get update && apt-get install -y \
-    tzdata \
-    zip \
-    unzip \
-    && rm -rf /var/lib/apt/lists/*
+RUN go mod download
 
 # VScodeの拡張機能の警告対策
-RUN go install github.com/go-delve/delve/cmd/dlv@latest
-RUN go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-RUN go install github.com/fatih/gomodifytags@latest
-RUN go install github.com/haya14busa/goplay/cmd/goplay@latest
-RUN go install -v golang.org/x/tools/gopls@latest
-RUN go install github.com/cweill/gotests/...@latest
-RUN go install github.com/josharian/impl@latest
+RUN go install github.com/go-delve/delve/cmd/dlv@latest \
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest \
+    && go install github.com/fatih/gomodifytags@latest \
+    && go install github.com/haya14busa/goplay/cmd/goplay@latest \
+    && go install -v golang.org/x/tools/gopls@latest \
+    && go install github.com/cweill/gotests/...@latest \
+    && go install github.com/josharian/impl@latest
 
 # DB操作用ORMライブラリ
-RUN go install github.com/volatiletech/sqlboiler/v4@latest
-RUN go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
+RUN go install github.com/volatiletech/sqlboiler/v4@latest \
+    && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
 # RUN go get -v github.com/volatiletech/null/v8
 
 # connect-go
-RUN go install github.com/bufbuild/buf/cmd/buf@latest
-RUN go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
-RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-RUN go install github.com/bufbuild/connect-go/cmd/protoc-gen-connect-go@latest
+RUN go install github.com/bufbuild/buf/cmd/buf@latest \
+    && go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest \
+    && go install google.golang.org/protobuf/cmd/protoc-gen-go@latest \
+    && go install github.com/bufbuild/connect-go/cmd/protoc-gen-connect-go@latest
 
+FROM golang:1.22-alpine
 
+# 必要なツールのインストール
+RUN apk add --no-cache \
+    tzdata \
+    curl \
+    git
 
-# タイムゾーンを設定する環境変数
 ENV TZ=Asia/Tokyo
+
+COPY --from=builder /go/bin /go/bin
+
+ENV PATH="/go/bin:${PATH}"
+
+WORKDIR /go/src/github.com/mamoruuji/dynamic_novel_api
