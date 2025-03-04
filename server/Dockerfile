@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 WORKDIR /go/src/github.com/mamoruuji/dynamic_novel_api
 
@@ -27,7 +27,13 @@ RUN go install github.com/bufbuild/buf/cmd/buf@latest \
     && go install google.golang.org/protobuf/cmd/protoc-gen-go@latest \
     && go install github.com/bufbuild/connect-go/cmd/protoc-gen-connect-go@latest
 
-FROM golang:1.22-alpine
+# テストツール （gomockは不要になる予定）
+# RUN go install github.com/golang/mock/mockgen@v1.7.0-rc.1 \
+#     && go install github.com/stretchr/testify/mock@v1.9.0 \
+#     && go install github.com/DATA-DOG/go-sqlmock
+
+
+FROM golang:1.23-alpine
 
 # 必要なツールのインストール
 RUN apk add --no-cache \
