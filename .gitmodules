@@ -4,3 +4,9 @@
 [submodule "dynamic_novel_web"]
 	path = client/web
 	url = https://github.com/mamoruuji/dynamic_novel_web.git
+[submodule "client/web"]
+	path = client/web
+	url = https://github.com/mamoruuji/dynamic_novel_web.git
+[submodule "server/api"]
+	path = server/api
+	url = https://github.com/mamoruuji/dynamic_novel_api.git
